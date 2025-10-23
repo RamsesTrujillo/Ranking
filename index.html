@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- esto asegura que la u con tilde se vea -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web de pajas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Botón fijo fuera del sidebar -->
+    <button id="toggle-menu" class="toggle-btn">&#9776;</button>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar collapsed" id="sidebar">
+    <div class="sidebar-header">
+        <h2 class="sidebar-title"><span>Menú</span></h2>
+    </div>
+    <ul class="sidebar-menu">
+        <li><a href="#" data-section="usuario">👤 <span>Pajero</span></a></li>
+        <li><a href="#" data-section="puntos">➕ <span>Sumar pajas</span></a></li>
+        <li><a href="#" data-section="ranking">🏆 <span>Ranking de pajas</span></a></li>
+    </ul>
+</nav>
+
+
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <section id="usuario" class="section active">
+                <h2>Crear pajero</h2>
+                <input type="text" id="username" placeholder="Nombre de usuario">
+                <button id="create-user">Crear pajero</button>
+                <p id="user-message"></p>
+            </section>
+
+            <section id="puntos" class="section">
+                <h2>Sumar pajas</h2>
+                <p>Pajero: <span id="current-user">Ninguno</span></p>
+                <p>Pajas: <span id="current-points">0</span></p>
+                <button id="add-points">Sumar 1 paja</button>
+            </section>
+
+            <section id="ranking" class="section">
+                <h2>Ranking de pajas</h2>
+                <ul id="ranking-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
